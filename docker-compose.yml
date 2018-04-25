@@ -1,20 +1,19 @@
 version: '3.3'
 services:
     vpn:
-          build: .
-          restart: always
-          ports:
-              - 500:500/udp
-              - 4500:4500/udp
-          environment:
-              MYIP: 192.168.0.101
-              MYGATEWAY: 192.168.0.1
-              MYUSERNAME: vpn
-              MYPASSWORD: changeme
-              MYSECRET: changeme
+        image: ritazh/l2tpvpn  
+        restart: always
+        ports:
+                - 500:500/udp
+                - 4500:4500/udp
+        environment:
+            MYIP: 192.168.0.101
+            MYGATEWAY: 192.168.0.1
+            MYUSERNAME: vpn
+            MYPASSWORD: IZ7knlJ1wRcV7z8bo7Ks
+            MYSECRET: O4Sen4rvKuz2gjlihU4b
           
-          privileged: true
-          network_mode: "host"
-          volumes:
-              - "/lib/modules:/lib/modules:ro"
-          image: ritazh/l2tpvpn
+        privileged: true
+        network_mode: "host"
+        volumes:
+            - "/lib/modules:/lib/modules:ro"

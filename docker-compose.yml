@@ -10,8 +10,8 @@ services:
             MYIP: 192.168.0.101
             MYGATEWAY: 192.168.0.1
             MYUSERNAME: vpn
-            MYPASSWORD: IZ7knlJ1wRcV7z8bo7Ks
-            MYSECRET: O4Sen4rvKuz2gjlihU4b
+            MYPASSWORD: vpn
+            MYSECRET: vpn
           
         privileged: true
         network_mode: "host"
